@@ -1,0 +1,29 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameDisplay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 640px;
+    height: 360px;
+    z-index: -1;
+    background-color: #ff00bf;
+    border: solid black;
+    border-radius: 5px;
+}
+
+.subSteper {
+    position: absolute;
+    z-index: 1;
+}
+
+.mainSteper { 
+    position: absolute;
+    z-index: 2;
+}
