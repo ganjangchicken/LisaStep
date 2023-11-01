@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
 
 body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Gugi', sans-serif;
 }
 
 .gameDisplay {
@@ -26,4 +28,14 @@ body {
 .mainSteper { 
     position: absolute;
     z-index: 2;
+}
+
+.startBtn {
+    position: absolute;
+    z-index: 3;
+    border: solid black;
+    border-radius: 5px;
+    opacity: 0.5;
+    font-family: 'Gugi', sans-serif;
+    font-size: 20px;
 }
