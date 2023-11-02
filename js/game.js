@@ -27,7 +27,7 @@ const subChar = document.querySelector('.subSteper');
 const mainChar = document.querySelector('.mainSteper');
 const startBtn = document.querySelector('.startBtn');
 const bgm = document.querySelector('.bgm');
-const endPage = document.querySelector('.endPage');
+
 let startTime = 0;
 let beforeTime = 0;
 let afterTime = 0;
@@ -84,14 +84,6 @@ startBtn.addEventListener('click', () => {
             if(bitCounter > 218) {
                 clearInterval(whiteStep);
                 clearInterval(blackStep);
-                endPage.style = `
-                    position: absolute;
-                    background-color: black;
-                    opacity: 0;
-                    z-index: 4; 
-                    animation: 
-                    fadeout 3s;
-                `;
             }
 
         }, 368);
