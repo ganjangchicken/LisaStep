@@ -79,11 +79,15 @@ startBtn.addEventListener('click', () => {
             
             beforeTime = afterTime;
             afterTime = Date.now();
-            console.log(`diff = ${afterTime - beforeTime}, div = ${(beforeTime - startTime) / 368}, counter = ${bitCounter}`);
+            //console.log(`diff = ${afterTime - beforeTime}, div = ${(beforeTime - startTime) / 368}, counter = ${bitCounter}`);
             
             if(bitCounter > 218) {
                 clearInterval(whiteStep);
                 clearInterval(blackStep);
+                let endPage = document.querySelector('.endPage');
+                endPage.style.backgroundColor = "black";
+                endPage.style.opacity = "0";
+                endPage.style.animation = "fadeout 3s forwards";
             }
 
         }, 368);
