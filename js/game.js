@@ -85,6 +85,7 @@ startBtn.addEventListener('click', () => {
                 clearInterval(whiteStep);
                 clearInterval(blackStep);
                 let endPage = document.querySelector('.endPage');
+                endPage.style.zIndex = "3";
                 endPage.style.backgroundColor = "black";
                 endPage.style.opacity = "0";
                 endPage.style.animation = "fadeout 3s forwards";
