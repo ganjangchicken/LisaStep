@@ -33,6 +33,7 @@ let beforeTime = 0;
 let afterTime = 0;
 let bitCounter = 0;
 
+// mouse click
 document.querySelector('.gameDisplay').addEventListener('mousedown', (e) => {
     IsMouseDown = true;
     
@@ -45,6 +46,25 @@ document.querySelector('.gameDisplay').addEventListener('mousedown', (e) => {
 });
 document.querySelector('.gameDisplay').addEventListener('mouseup', (e) => {
     IsMouseDown = false;
+});
+
+// space key down
+window.addEventListener('keydown', (e) => {
+    if(e.key == ' '){
+        IsMouseDown = true;
+    
+        mainStepImgSrc = `./imgFile/img/${sideController}/${sizeController}/lisa${sizeController}_${sideController}_step_main.png`;
+        mainChar.src = mainStepImgSrc
+        setTimeout((e) => {
+            mainIdleImgSrc = `./imgFile/img/${sideController}/${sizeController}/lisa${sizeController}_${sideController}_idle_main.png`;
+            mainChar.src = mainIdleImgSrc
+        }, 120);
+    }
+});
+window.addEventListener('keyup', (e) => {
+    if(e.key == ' '){
+        IsMouseDown = false;
+    }
 });
 
 function subStep() {
